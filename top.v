@@ -9,11 +9,12 @@ module top(
         .NotQ(led[1]),
         .E(btnC)
     );
+
     memory_system part2(
-        .data(sw[15:8]),
-        .addr(sw[7:6]),
-        .store(btnC),
-        .memory(led)
-    );
+    .data(sw[15:8]),
+    .addr(sw[7:6]),
+    .store(btnC),
+    .memory(led[15:8])
+);
 
 endmodule
